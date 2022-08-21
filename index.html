@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <title>Document</title>
+    <style>
+        .table{
+            overflow-y: auto;
+            margin-left: 3px;
+            border: 1px solid;
+        }
+        table{
+            width: 500px;
+            cursor: pointer;
+        }
+        table,td,th{
+            border:1px solid rgba(0,0,0,0.2);
+            border-collapse:separate;
+            height: fit-content;
+            text-align: center;
+            padding: 5px;
+        }
+        .main{
+            display: flex;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <canvas></canvas>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>X</th>
+                    <th>Y-real</th>
+                    <th>Y-pred</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    x:<div class="posx"></div>
+    y:<div class="posy"></div>
+    m:<div class="slope"></div>
+    c:<div class="inter"></div>
+    error:<div class="error"></div>
+    <script src="./index.js"></script>
+</body>
+</html>
